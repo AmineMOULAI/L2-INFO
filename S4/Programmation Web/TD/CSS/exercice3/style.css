@@ -1,0 +1,22 @@
+body{
+    background-color: aqua;
+    color: navy;
+}
+
+.menu{
+    background-color: black;
+    color: white;
+}
+
+.contrib{
+    background-color: navy;
+    color: white    ;
+}
+
+h1{
+    color: white;
+    background-color: navy;
+}
+h2{
+    color: black;
+}

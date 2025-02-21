@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>a0</string>
+        </entry>
+      </elementAttributes>
+      <pos x="540" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>a1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="380" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>a2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="220" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>a3</string>
+        </entry>
+      </elementAttributes>
+      <pos x="80" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>a4</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-80" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>a5</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-220" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>a6</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-380" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>a7</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-540" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>b0</string>
+        </entry>
+      </elementAttributes>
+      <pos x="500" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>b1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="340" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>b2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="180" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>b3</string>
+        </entry>
+      </elementAttributes>
+      <pos x="40" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>b4</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-120" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>b5</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-260" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>b6</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-420" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>Label</string>
+          <string>b7</string>
+        </entry>
+      </elementAttributes>
+      <pos x="-580" y="-340"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>s0</string>
+        </entry>
+      </elementAttributes>
+      <pos x="700" y="0"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>s1</string>
+        </entry>
+      </elementAttributes>
+      <pos x="700" y="80"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>s2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="700" y="160"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>s3</string>
+        </entry>
+      </elementAttributes>
+      <pos x="700" y="240"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>s4</string>
+        </entry>
+      </elementAttributes>
+      <pos x="700" y="320"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>s5</string>
+        </entry>
+      </elementAttributes>
+      <pos x="700" y="380"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>s6</string>
+        </entry>
+      </elementAttributes>
+      <pos x="700" y="440"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Out</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>s7</string>
+        </entry>
+      </elementAttributes>
+      <pos x="700" y="500"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="540" y="-140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation reference="../../../../visualElement[25]/elementAttributes/entry/rotation"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="380" y="-140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="220" y="-140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation reference="../../../../visualElement[25]/elementAttributes/entry/rotation"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="80" y="-140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation reference="../../../../visualElement[25]/elementAttributes/entry/rotation"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-80" y="-140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation reference="../../../../visualElement[27]/elementAttributes/entry/rotation"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-220" y="-140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-380" y="-140"/>
+    </visualElement>
+    <visualElement>
+      <elementName>And</elementName>
+      <elementAttributes>
+        <entry>
+          <string>rotation</string>
+          <rotation rotation="3"/>
+        </entry>
+        <entry>
+          <string>wideShape</string>
+          <boolean>true</boolean>
+        </entry>
+      </elementAttributes>
+      <pos x="-540" y="-140"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="520" y="0"/>
+      <p2 x="700" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="80"/>
+      <p2 x="700" y="80"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="160"/>
+      <p2 x="700" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="60" y="240"/>
+      <p2 x="700" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="-100" y="320"/>
+      <p2 x="700" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="-560" y="500"/>
+      <p2 x="700" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="-400" y="440"/>
+      <p2 x="700" y="440"/>
+    </wire>
+    <wire>
+      <p1 x="-240" y="380"/>
+      <p2 x="700" y="380"/>
+    </wire>
+    <wire>
+      <p1 x="-420" y="-340"/>
+      <p2 x="-420" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-260" y="-340"/>
+      <p2 x="-260" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-580" y="-340"/>
+      <p2 x="-580" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-100" y="-60"/>
+      <p2 x="-100" y="320"/>
+    </wire>
+    <wire>
+      <p1 x="40" y="-340"/>
+      <p2 x="40" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="520" y="-60"/>
+      <p2 x="520" y="0"/>
+    </wire>
+    <wire>
+      <p1 x="360" y="-60"/>
+      <p2 x="360" y="80"/>
+    </wire>
+    <wire>
+      <p1 x="200" y="-60"/>
+      <p2 x="200" y="160"/>
+    </wire>
+    <wire>
+      <p1 x="-240" y="-60"/>
+      <p2 x="-240" y="380"/>
+    </wire>
+    <wire>
+      <p1 x="-400" y="-60"/>
+      <p2 x="-400" y="440"/>
+    </wire>
+    <wire>
+      <p1 x="-560" y="-60"/>
+      <p2 x="-560" y="500"/>
+    </wire>
+    <wire>
+      <p1 x="-80" y="-340"/>
+      <p2 x="-80" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="80" y="-340"/>
+      <p2 x="80" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="500" y="-340"/>
+      <p2 x="500" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="180" y="-340"/>
+      <p2 x="180" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="340" y="-340"/>
+      <p2 x="340" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-120" y="-340"/>
+      <p2 x="-120" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-380" y="-340"/>
+      <p2 x="-380" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-220" y="-340"/>
+      <p2 x="-220" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="-540" y="-340"/>
+      <p2 x="-540" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="380" y="-340"/>
+      <p2 x="380" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="540" y="-340"/>
+      <p2 x="540" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="220" y="-340"/>
+      <p2 x="220" y="-140"/>
+    </wire>
+    <wire>
+      <p1 x="60" y="-60"/>
+      <p2 x="60" y="240"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>

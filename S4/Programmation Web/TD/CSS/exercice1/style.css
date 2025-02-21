@@ -1,0 +1,39 @@
+body{
+    background-color: #ffdd99;
+    font-family: Palatino;
+    font-size: 15px;    
+}
+p:first-of-type:first-letter{
+    font-size: 50px;
+}
+
+h1{
+    color: #661400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2{
+    color: #b34700;
+    font-variant: small-caps;
+}
+section:last-of-type > h2{
+    color: white;
+}
+
+section:last-of-type{
+    background-color: #661400;
+    color: white;
+}
+
+span{
+    font-style: italic;
+}
+
+section:last-of-type li::marker{
+    content: url(check-white.svg);
+}
+
+li::marker{
+    content: url(check.svg);
+}
