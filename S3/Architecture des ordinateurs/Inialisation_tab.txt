@@ -1,0 +1,32 @@
+Assembleur :
+addi x5, x0, 0       # x5 = 0 
+addi x6, x0, 5       # x6 = 5  
+addi x7, x0, 0       # x7 = 0 
+nop
+nop
+
+# Boucle d'initialisation du tableau
+WHILE:
+    bge x5, x6, END_WHILE  # Si i >= 5, sortir de la boucle
+    nop
+    nop
+    nop
+    sw x5, 0(x7)      # Stocke la valeur de x5 dans le tableau
+    nop
+    nop
+    nop
+    addi x7, x7, 4    # Incrémente l'adresse du tableau (4 octets par élément)
+    addi x5, x5, 1    # Incrémente l'indice
+    beq x0, x0, WHILE  # Revenir à la boucle
+    nop
+    nop
+    nop
+
+END_WHILE:
+   addi x10, x0, 0
+
+
+Binaire :
+0x00	0x00000293	0x00500313	0x00000393	0x00000013	0x00000013	0x0262DC63	0x00000013	0x00000013	
+0x08	0x00000013	0x00000013	0x0053A023	0x00000013	0x00000013	0x00000013	0x00438393	0x00128293
+0x10	0xFC000CE3	0x00000013	0x00000013	0x00000013	0x00000513 

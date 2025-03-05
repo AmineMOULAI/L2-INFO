@@ -1,0 +1,48 @@
+# Initialisation du tableau
+addi x5, x0, 0       # x5 = 0 (Indice i)
+addi x6, x0, 5       # x6 = 5 (Nombre d'éléments dans le tableau)
+addi x7, x0, 0       # x7 = 0 (Adresse du tableau)
+nop
+nop
+
+# Boucle d'initialisation du tableau
+LOOP:
+    bge x5, x6, END_LOOP  # Si i >= 5, sortir de la boucle
+    nop
+    nop
+    nop
+    sw x5, 0(x7)      # Stocke la valeur de x5 dans le tableau
+    addi x7, x7, 4    # Incrémente l'adresse du tableau (4 octets par élément)
+    addi x5, x5, 1    # Incrémente l'indice
+    beq x0, x0, LOOP  # Revenir à la boucle
+    nop
+    nop
+    nop
+
+END_LOOP:
+    # Charger une valeur du tableau
+    addi x8, x0, 2    # x8 = 2 
+    addi x7, x0, 0    # Réinitialise l'adresse du tableau
+    addi x7, x7, 8    # Adresse du tableau[2] 
+
+    lw x9, 0(x7)      # x9 = tableau[indice 2]
+    nop
+    nop
+    nop
+    # Faites quelque chose avec la valeur chargée (par exemple, additionner 10)
+    addi x10, x9, 10   # x10 = x9 + 10
+    nop
+    nop
+    nop
+    # Stocker le résultat dans le tableau (par exemple, à l'adresse de tableau[indice 2])
+    sw x10, 0(x7)      # Stocke la nouvelle valeur dans tableau[indice 2]
+    nop
+    nop
+    nop
+
+Binaire :
+0x00	0x00000293	0x00500313	0x00000393	0x00000013	0x00000013	0x0262DC63	0x00000013	0x00000013	
+0x08	0x00000013	0x00000013	0x0053A023	0x00000013	0x00000013	0x00000013	0x00438393	0x00128293
+0x10	0xFC000CE3	0x00000013	0x00000013	0x00000013	0x00200413	0x00000393	0x00838393	0x0003a483
+0x18	0x00000013	0x00000013	0x00000013	0x00a48513	0x00000013	0x00000013	0x00000013	0x00a3a023
+0x20	0x00000013	0x00000013	0x00000013	0x00000000	0x00000000	0x00000000	0x00000000	0x00000000

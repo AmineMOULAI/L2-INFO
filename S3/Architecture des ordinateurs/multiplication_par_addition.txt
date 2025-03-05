@@ -1,0 +1,28 @@
+Assembleur :
+      
+        addi t0,x0,2
+        addi t1,x0,5
+        addi t2,x0,0
+        addi t3,x0,0
+        nop
+        nop
+        WHILE:
+        bge t2,t1,FIN
+        nop
+        nop
+        add t3,t3,t0
+        addi t2,t2,1
+        beq x0,x0,WHILE
+        nop
+        nop
+        nop
+        FIN:
+        addi t3,t3,0
+        nop
+        nop
+        nop
+
+    Binaire : 
+0x00	0x00200293	0x00500313	0x00000393	0x00000513	0x00000013	0x00000013	0x0263D263	0x00000013
+0x08	0x00000013	0x00550533	0x00138393	0xFE0006E3	0x00000013	0x00000013	0x00000013	0x00050513
+0x10	0x00000013	0x00000013	0x00000013	0x00000000	0x00000000	0x00000000	0x00000000	0x00000000
