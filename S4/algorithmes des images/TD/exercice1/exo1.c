@@ -173,7 +173,7 @@ void pgm_write_histogram(const char* fname, pgm_t* img)
     }
     fclose(f);
 }
-
+/*
 int main()
 {
     unsigned int h = 10, w = 15, v = 255;
@@ -205,3 +205,4 @@ int main()
 
     return 0;
 }
+*/

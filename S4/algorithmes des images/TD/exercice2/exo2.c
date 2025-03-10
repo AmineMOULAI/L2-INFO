@@ -177,7 +177,7 @@ void ppm_write_histogram(const char* fname, ppm_t* img)
     {
         fprintf(f, "Ceci est un histogram\n");
         fprintf(f, " val|   r |   g |   b |\n");
-        for (int j = 0; j < img->max_value; j++)
+        for (int j = 0; j < (int)img->max_value; j++)
             fprintf(f, "%3d | %3d | %3d | %3d |\n", j, histogram[0][j], histogram[1][j], histogram[2][j]);
     }
     fclose(f);    
