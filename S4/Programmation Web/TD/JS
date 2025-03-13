@@ -1,0 +1,107 @@
+> JS
+
+* Javascript permet :
+	* exécuter le code dans les pages web 
+	* Web Dynamique
+	* Reduire l'échange des données avec le serveur
+
+* JS est un langage : 
+	* interprété
+	* faiblement typé
+	* sans notion de pointeurs
+	* Fonctions déclarées n'import où, avec des paramètre 
+	* Basé sur les objets mais simplifié et informel 
+
+* JS sert à :
+	* Valider des champs de formulaires 
+	* Capturer des événements sur la page
+	* Modifier dynaamiquement de l'aspect de certains éléments de la page 
+	* Enregistrement et lecture de cookies 
+	* Défilement de contenu 
+
+* Le fichier JS est chargé soit dans <head> soit dans <body>
+
+* Mode stricte peut être activé 'use strict' ou dans une fonction. Il génére plus de Warnings et d'erreurs. Il est plus rapide.
+
+> LES VARIABLES
+
+* La portée d'une variable déclarée avec var est l'ensemble de la fonction où elle est déclarée
+* La portée d'une variable déclarée avec let est limité au bloc où elle est déclarée
+* Ex : 
+	function f () {
+		var v = 2046; // la portée de v se limite dans la fonction 
+		if ( v < 3000) {
+			let w = 3000 -2046; // w est limité dans le if
+			var z = w + v ; // Même chose comme v 
+			document . writeln ( v , w ) ; // OK
+		}
+		document . writeln ( v ,z , w ) ; // pas OK
+	}
+
+* Les variables globales sont déclarées en dehors des fonctions 
+
+* La fonction 'prompt' ouvre une fenetre avec un champs d'entrée pour récupérer une valeur 
+
+* La fonction 'alert' sert à ouvrir une fenetre popup qui contient un message 
+
+> LES OPERATEURS 
+
+Signe 		Signification 			Exemple
+-----------------------------------------------------------
+= 		a la valeur affectation 	x=5
++ 		addition 			x + 3
+- 		soustraction 			x - 3
+* 		multiplication 			x*2
+/ 		division 			x /2
+% 		modulo reste de la division 	x%5
+
+> LES FONCTIONS
+
+function function_name(args)
+{
+	// bloc d'instruction
+	return (val);
+}
+
+Exemple :
+	function carre(x)
+	{
+		return(x*x);
+	}
+
+* NOTATION ES6
+let carre = (x) = > {return(x*x);} 
+
+> STRUCTURES DE CONTROLES	
+
+* Les mêmes structures comme en C
+
+> OPERATEURS DE COMPARAAISON / LOGIQUE 
+
+Symbole 	Nom 				Exemple 		R ́esultat
+=== 		 ́egal `a (contenu et type) 	x===11 			true
+== 		 ́egal (avec transtypage)	x==11 			true
+< 		inf ́erieur 			x<11 			false
+<= 		inf ́erieur ou  ́egal 		x<=11 			true
+> 		sup ́erieur 			x>11 			false
+>= 		sup ́erieur ou  ́egal 		x>=11 			true
+!= 		diff ́erent (avec transtypage) 	x! =11 			false
+!== 		diff ́erent (contenu ou type) 	x! =11 			false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

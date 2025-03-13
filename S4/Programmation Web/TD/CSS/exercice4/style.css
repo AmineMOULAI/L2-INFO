@@ -1,0 +1,73 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    color: navy;
+}
+
+.menu, .contrib{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.menu{
+    width: 300px;
+    height: 100vh;
+    margin: 10px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+
+.menu nav{
+    background-color: black;
+    border-radius: 15px;
+    padding: 10px;
+    width: 40%;
+
+}
+
+.menu a{
+    color: white;
+}
+
+h1{
+    color: white;
+    background-color: navy;
+}
+h2{
+    color: black;
+}
+
+.countainer{
+    display: flex;
+
+}
+
+.contrib{
+    width: 300px;
+    min-width: 300px;
+}
+
+.contrib-section{
+    background-color: navy;
+    color: white;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.main-countainer{
+    background-color: rgb(176, 217, 236);
+    flex: 1;
+    min-width: 600px;
+
+}
+
+.contrib-section h4{
+    text-align: center;
+}

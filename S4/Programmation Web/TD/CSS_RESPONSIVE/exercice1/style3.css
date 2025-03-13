@@ -1,0 +1,12 @@
+h1, h2, p, strong, a, h1 q{
+    background-color: white ;
+    color: black;
+    font-family: monospace;
+    font-size: small;
+}
+article{
+    border: none;
+}
+footer, img{
+    display: none;
+}
