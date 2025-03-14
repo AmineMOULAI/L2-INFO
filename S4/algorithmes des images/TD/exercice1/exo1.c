@@ -48,20 +48,16 @@ pgm_t* pgm_read_asc(const char* fname)
     char type[3];
     
     fscanf(f, "%s", type);
-    printf("%s", type);
 
     int c = fgetc(f);
     c = fgetc(f);
-    printf("%c ", c);
     while (c == '#')
     {
         while (c != '\n' && c != EOF)
         {
             c = fgetc(f);
-            printf("%c", c);
         }
         c = fgetc(f);
-        printf("%c\n", c);
     }
     if (c != EOF) ungetc(c, f);
 

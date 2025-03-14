@@ -4,7 +4,7 @@ OBJS = exo1.o jpeg.o
 BIN = jpeg
 
 exe : $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -I../exercice1 -o $(BIN)
+	$(CC) $(CFLAGS) $(OBJS) -I../exercice1 -o $(BIN) -lm
 	./jpeg
 
 %.o : %.c
