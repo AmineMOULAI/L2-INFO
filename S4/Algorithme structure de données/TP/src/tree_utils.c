@@ -17,6 +17,11 @@
     * indentation_display
     * print_node
     * tournement    
+    * init_stack
+    * is_empty 
+    * push
+    * pop
+    * pre_order_non_rec
 */
 
 int* create_array(int n)
@@ -48,7 +53,7 @@ node_t* create_node(int val)
 int tree_height(tree_t A)
 {
     if(A == NULL) return -1;
-    else return 1 + tree_height(A->left) + tree_height(A->right);
+    else return 1 + m(tree_height(A->left), tree_height(A->right));
 }
 
 int nb_node(tree_t A)
@@ -87,32 +92,112 @@ tree_t* create_bst(int* array, int n)
     return tree;
 }
 
-void pre_order(tree_t A)
+void pre_order(tree_t* A)
 {
-    if (A != NULL)
+    if ((*A) != NULL)
     {
-        printf("%d ", A->val);
-        pre_order(A->left);
-        pre_order(A->right);
+        printf("%d ", (*A)->val);
+        pre_order(&(*A)->left);
+        pre_order(&(*A)->right);
     }
 }
 
-void in_order(tree_t A)
+void in_order(tree_t* A)
 {
-    if (A != NULL)
+    if (*A != NULL)
     {
-        in_order(A->left);
-        printf("%d ", A->val);
-        in_order(A->right);
+        in_order(&(*A)->left);
+        printf("%d ", (*A)->val);
+        in_order(&(*A)->right);
     }
 }
 
-void post_ordre(tree_t A)
+void post_ordre(tree_t* A)
+{
+    if (*A != NULL)
+    {
+        post_ordre(&(*A)->left);
+        post_ordre(&(*A)->right);
+        printf("%d ", (*A)->val);
+    }
+}
+
+void indentation_display_rec(tree_t A, int i, int height)
 {
     if (A != NULL)
     {
-        post_ordre(A->left);
-        post_ordre(A->right);
-        printf("%d ", A->val);
+        for (int j = 0; j < i; j++)
+            printf("  ");
+        printf("%d\n", A->val);
+        indentation_display_rec(A->left, height - tree_height(A->left), height);
+        indentation_display_rec(A->right, height - tree_height(A->left), height);
     }
+    
 }
+
+void indentation_display(tree_t A, int i, int height)
+{
+    indentation_display_rec(A, 0, height);
+}
+
+tree_t tournement(int* t, int l, int r)
+{
+    int m = (l + r) / 2;
+    tree_t p = create_node(t[m]);
+    if (l == r) return p;
+    tournement(t, l, m);
+    tournement(t, m + 1, r);
+    int u = p->left->val;
+    int v = p->right->val;
+    p->val = (u > v) ? u : v;
+    return p;
+}
+
+stack_t* init_stack(int capacity)
+{
+    stack_t* s = (stack_t*)malloc(sizeof(stack_t));
+    if(s != NULL)
+    {
+        s->data = (int*)malloc(capacity * sizeof(int));
+        for (int i = 0; i < s->capacity; i++) s->data[i] = 0;
+        s->top = -1;
+        s->capacity = capacity;
+    }
+    return s;
+}
+
+int is_empty(stack_t* s)
+{
+    if (s->top == -1) return 1;
+    return 0;
+}
+
+int is_full(stack_t* s)
+{
+    if (s->top == s->capacity - 1) return 1;
+    return 0;
+}
+
+stack_t* push(stack_t* s, int v)
+{
+    if (is_full(s)) printf("Overflow ! Can't push !\n");
+    else s->data[++s->top] = v;
+    
+    return s;
+}
+
+int pop(stack_t* s)
+{
+    if (is_empty(s))
+    {
+        printf("Can't pop !");
+        return -1;
+    }
+    int tmp = s->data[s->top];
+    s->data[s->top] = 0;
+    s->top--;
+    return tmp;
+}
+
+
+
