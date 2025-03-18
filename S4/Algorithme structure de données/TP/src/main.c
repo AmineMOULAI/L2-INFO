@@ -42,18 +42,27 @@ int main()
     printf("\n");
 
     tree_t A = tournement(array, 0, n);*/
-    int c = 10;
+    /*int c = 10;
     stack_t* s = init_stack(c);
-    for (int i = 0; i < s->capacity; i++)
-        s = push(s, i + 1);
-    for (int i = 0; i < s->capacity; i++)
-       printf("%d ", s->data[i]);
-    printf("\n"); 
+    tree_t t = create_node(5);
+    push(s, t);
 
-    int v = pop(s);
-    printf("%d\n", v);
-    for (int i = 0; i < s->capacity; i++)
-       printf("%d ", s->data[i]);
-    printf("\n"); 
+    tree_t t1 = create_node(10);
+    push(s, t1);
+
+    printf("%d\n%d\n", s->data[s->top]->val, s->data[s->top - 1]->val);*/
+
+    int n;
+    printf("Insert n : ");
+    scanf("%d", &n);
+    int* array = create_array(n);
+    for (int i = 0; i < n; i++)
+        printf("%d ", array[i]);
+    printf("\n");
+    
+    tree_t* A = create_bst(array, n);
+    int nb = nb_node(*A);
+    printf("%d\n", nb);
+    //pre_order_non_rec(*A, nb);
     
 }

@@ -11,7 +11,7 @@
 
     typedef struct stack_t
     {
-        int* data;
+        tree_t* data;
         int capacity, top;
     }stack_t;
 
@@ -32,8 +32,9 @@
     stack_t* init_stack(int capacity);
     int is_empty(stack_t* s);
     int is_full(stack_t* s);
-    stack_t* push(stack_t* s, int v);
-    int pop(stack_t* s);
+    void push(stack_t* s, tree_t v);
+    tree_t pop(stack_t* s);
+    void pre_order_non_rec(tree_t root, int nb_node);
 
 
 

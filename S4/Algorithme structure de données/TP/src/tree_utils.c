@@ -58,7 +58,7 @@ int tree_height(tree_t A)
 
 int nb_node(tree_t A)
 {
-    if (A = NULL) return 0;
+    if (A == NULL) return 0;
     else return 1 + nb_node(A->left) + nb_node(A->right);
 }
 
@@ -158,8 +158,7 @@ stack_t* init_stack(int capacity)
     stack_t* s = (stack_t*)malloc(sizeof(stack_t));
     if(s != NULL)
     {
-        s->data = (int*)malloc(capacity * sizeof(int));
-        for (int i = 0; i < s->capacity; i++) s->data[i] = 0;
+        s->data = (tree_t*)malloc(capacity * sizeof(tree_t));
         s->top = -1;
         s->capacity = capacity;
     }
@@ -168,36 +167,52 @@ stack_t* init_stack(int capacity)
 
 int is_empty(stack_t* s)
 {
-    if (s->top == -1) return 1;
-    return 0;
+    return s->top == 0;
 }
 
 int is_full(stack_t* s)
 {
-    if (s->top == s->capacity - 1) return 1;
-    return 0;
+     return s->top == s->capacity - 1;
 }
 
-stack_t* push(stack_t* s, int v)
+void push(stack_t* s, tree_t v)
 {
     if (is_full(s)) printf("Overflow ! Can't push !\n");
     else s->data[++s->top] = v;
-    
-    return s;
 }
 
-int pop(stack_t* s)
+tree_t pop(stack_t* s)
 {
     if (is_empty(s))
     {
         printf("Can't pop !");
-        return -1;
+        exit(1);
     }
-    int tmp = s->data[s->top];
-    s->data[s->top] = 0;
-    s->top--;
-    return tmp;
+    return s->data[--s->top];
 }
+
+void pre_order_non_rec(tree_t root, int nb_node)
+{
+    tree_t current;
+    stack_t s;
+    init_stack(nb_node);
+    current = root;
+
+    if (current != NULL)
+    {
+        push(&s, current);
+        while(!is_empty(&s))
+        {
+            current = pop(&s);
+            printf("%d ", current->val);
+            if (current->left != NULL)
+                push(&s, current->left);
+            if(current->right != NULL)
+                push(&s, current->right);
+        }
+    }
+}
+
 
 
 
