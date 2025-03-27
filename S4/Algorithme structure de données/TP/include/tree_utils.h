@@ -35,6 +35,12 @@
     void push(stack_t* s, tree_t v);
     tree_t pop(stack_t* s);
     void pre_order_non_rec(tree_t root, int nb_node);
+    void in_order_non_rec(tree_t root, int nb_node);
+    void post_order_non_rec(tree_t root, int nb_node);
+    int is_heap(int array[], int n);
+    void rise(int heap[], int i, int v);
+    void sink(int heap[], int n, int i);
+
 
 
 

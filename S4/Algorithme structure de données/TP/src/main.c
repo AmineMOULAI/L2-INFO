@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <tree_utils.h>
 #include <time.h>
-
+#include <assert.h>
 int main()
 {
     srand(time(NULL));
@@ -59,10 +59,37 @@ int main()
     for (int i = 0; i < n; i++)
         printf("%d ", array[i]);
     printf("\n");
-    
+    /*
     tree_t* A = create_bst(array, n);
     int nb = nb_node(*A);
     printf("%d\n", nb);
-    //pre_order_non_rec(*A, nb);
-    
+    pre_order_non_rec(*A, nb);
+    printf("\n");
+    pre_orer(A);
+    printf("\n");
+    in_order_non_rec(*A, nb);
+    printf("\n");
+    in_order(A);
+    printf("\n");
+    printf("Post-order : ");
+    post_order_non_rec(*A, nb);
+    printf("\n");
+    printf("Post-order : ");
+    post_ordre(A);
+    printf("\n");*/
+    int heap[10] = {90, 89, 67, 78, 45, 34, 56, 23, 12, 11};
+    assert(!is_heap(array, n));
+    assert(is_heap(heap, 10));
+    printf("Heap : ");
+    for (int i = 0; i < n; i++)
+        printf("%d ", heap[i]);
+    printf("\n");
+
+    int indx = 8, val = 100;
+    rise(heap, indx, val);
+
+    printf("New heap : ");
+    for (int i = 0; i < n; i++)
+        printf("%d ", heap[i]);
+    printf("\n");
 }
