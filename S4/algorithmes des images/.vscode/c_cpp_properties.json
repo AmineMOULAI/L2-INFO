@@ -6,7 +6,9 @@
                 "${workspaceFolder}/**",
                 "${workspaceFolder}",
                 "${workspaceFolder}/TD/exercice1",
-                "${workspaceFolder}/TD/exercice2"
+                "${workspaceFolder}/TD/exercice2",
+                "/media/etudiants/z92304242/Mon_dossier_reseau_UPVD/L2-INFO/S4/algorithmes des images/.vscode",
+                "/media/etudiants/z92304242/Mon_dossier_reseau_UPVD/L2-INFO/S4/algorithmes des images/.vscode"
             ],
             "defines": [
                 "_DEBUG",
