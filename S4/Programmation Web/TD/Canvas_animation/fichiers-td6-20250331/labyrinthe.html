@@ -1,0 +1,89 @@
+<html>
+  <style>
+    /*
+    img{
+      display:none;
+    }*/
+  </style>
+  <body>
+    <h1> Animation : balle rebondissante dans un labyrinthe </h1>
+    <p id="pos">
+      posx posy
+    </p>
+    
+    <canvas id="canvas" width="775" height="775">
+      Le navigateur ne prend pas en charge le canvas 
+    </canvas>
+
+    <script>
+      // le labyrinthe est dessiné par une série de rectangle
+      // rectangles verticaux
+      var rect_v=[                
+          [0,0,55,775],
+          [120,240,55,294],
+          [244,482,55,292],
+          [364,119,55,175],
+          [361,363,55,171],
+          [605,120,55,296],
+          [604,602,55,173],
+          [726,1,55,774]
+      ];
+      
+      // rectagles horizontaux
+      var rect_h=[
+          [0,0,169,55],
+          [243,0,530,55],
+          [4,120,291,55],
+          [606,182,167,55],
+          [120,239,416,55],
+          [243,362,173,55],
+          [484,361,172,55],
+          [244,481,412,55],
+          [0,602,174,55],
+          [363,602,294,55],
+          [3,722,532,55],
+          [604,724,169,55]
+      ];
+      
+      // position de la balle initiale
+      var posx=568;
+      var posy=744;
+      var vx=-1;
+      var vy=-1;
+      var interval;
+      
+      const canvas=document.getElementById("canvas");
+      const contexte=canvas.getContext('2d');
+
+      function draw(){
+          // on efface
+          contexte.fillStyle="white";
+	  contexte.fillRect(0,0,775,775);
+          
+          // on dessine le labyrinthe          
+          // verticaux
+          for(let i=0;i<rect_v.length;i++)
+          {          
+	      contexte.fillStyle="black";
+	      contexte.fillRect(rect_v[i][0],rect_v[i][1],rect_v[i][2],rect_v[i][3]);
+          }
+           // horizontaux
+          for(let i=0;i<rect_h.length;i++)
+          {          
+	      contexte.fillStyle="black";
+	      contexte.fillRect(rect_h[i][0],rect_h[i][1],rect_h[i][2],rect_h[i][3]);
+          }
+          // on dessine la balle
+          contexte.fillStyle="red";
+          contexte.beginPath();
+	  contexte.arc(posx,posy,5,0,2*Math.PI);
+          contexte.fill();
+          contexte.closePath();
+      }
+
+
+      draw();
+
+    </script>
+    
+  </body>
