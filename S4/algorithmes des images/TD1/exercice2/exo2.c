@@ -183,53 +183,53 @@ void ppm_write_histogram(const char* fname, ppm_t* img)
     fclose(f);    
 }
 
-int main()
+/*int main()
 {
     unsigned int h = 10, w = 15, v = 255;
 
     ppm_t* image = ppm_alloc(h, w, v);
 
-    /*for (int i = 0; i < (int)image.height; i++)
+    for (int i = 0; i < (int)image.height; i++)
     {
         for (int j = 0; j < (int)image.width; j++)
             printf("(%3d, %3d, %3d) ", image.pixels[i][j].r, image.pixels[i][j].g, image.pixels[i][j].b);
         printf("\n");
-    }*/
+    }
     ppm_free(image);
 
     ppm_t* image1 = ppm_read_asc("eye_s_asc.ppm");
 
-    /*for (int i = 0; i < (int)image1->height; i++)
+    for (int i = 0; i < (int)image1->height; i++)
     {
         for (int j = 0; j < (int)image1->width; j++)
             printf("(%3d, %3d, %3d)\n", image1->pixels[i][j].r, image1->pixels[i][j].g, image1->pixels[i][j].b);
         printf("\n");
-    }*/
+    }
 
     ppm_write_asc("image.ppm", image1);
     ppm_t* res = ppm_alloc(image1->width, image1->height, image1->max_value);
     ppm_negative(image1, res);
 
-    /*for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 5; i++)
     {
         for (int j = 0; j < 5; j++)
             printf("(%3d, %3d, %3d)\n", res->pixels[i][j].r, res->pixels[i][j].g, res->pixels[i][j].b);
         printf("\n");
-    }*/
+    }
 
     ppm_extract("image_extracted.ppm", image1, 20, 20, 10, 10);
 
     int** histo = ppm_get_histrogram(image1);
 
-    /*for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j <= (int)image1->max_value; j++)
         {
             printf("(%d : %d)\n", j, histo[i][j]);
         }
         printf("+-------------------------------------+\n");
-    }*/
+    }
     
     ppm_write_histogram("histogram.ppm", image1);
     return 0;
-}
+}*/
