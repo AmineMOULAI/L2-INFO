@@ -15,7 +15,7 @@ def frequency(m : str):
 def reverse(a : int, mod : int) -> int:
     return next((i for i in range(1, mod) if (a * i) % mod == 1), -1)
 
-def normalization(n : int) -> int: return (n + M*M) % M
+def normalization(n : int) -> int: return n % M
 
 def system_resolution(cl1, cl2, ch1, ch2, M : int) -> tuple():
     dcl = normalization(cl1 - cl2)
@@ -44,9 +44,6 @@ def system_resolution(cl1, cl2, ch1, ch2, M : int) -> tuple():
             return (-1, -1)
          
 
-
-print(system_resolution(4, 0, 3, 5, M))
-
 def affine_decipher(ch : str, a, b, M : int):
     alphabet = {chr(i): i - ord('a') for i in range(ord('a'), ord('z') + 1)}
     m = ''
@@ -64,13 +61,11 @@ def vigenere_cipher(message, key : str) -> str:
         i = (i + 1) % l
     return ciphertext
 
-#print(vigenere("CETEXAMENESTFACILE", "KEY"))
 def find_key(text, ciphertext : str):
     l = len(text)
     for i in range(l):
-        print(chr(abs(ord(text[i]) - ord(ciphertext[i])) % 26 + 65), end="")
+        print(chr(abs(ord(text[i]) - ord(ciphertext[i])) + 65), end="")
 
-#find_key("REUTILISER", "TPYYKWMXGC")
 
 def vigenere_decipher(ciphertext, key : str) -> str:
     text = ""
@@ -82,4 +77,12 @@ def vigenere_decipher(ciphertext, key : str) -> str:
         i = (i + 1) % l
     return text
 
-print(vigenere_decipher("XZYXGEIXUFVQCMSSPPZTKP", "KEY"))
+
+#print(normalization(53))
+#print(system_resolution(4, 0, 3, 5, M))
+#print(reverse(17, M))
+#print(vigenere_cipher("CETEXAMENESTFACILE", "KEY"))
+#find_key("REUTILISER", "TPYYKWMXGC")
+print(vigenere_decipher("XZYXGEIXUFVQCMSSPPZTKP", "CLEF"))
+
+
