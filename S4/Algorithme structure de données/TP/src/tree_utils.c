@@ -3,6 +3,7 @@
 #include "tree_utils.h"
 
 /* 
+    * create_array
     * max
     * create_node
     * tree_height
@@ -25,6 +26,13 @@
     * in_order_non_rec
     * post_order_non_rec
     * is_heap
+    * rise
+    * sink
+    * heap_sort
+    * init_queue
+    * is_empty_queue
+    * is_full_queue
+    * BFS
 */
 
 int* create_array(int n)
@@ -194,7 +202,7 @@ tree_t pop(stack_t* s)
     return s->data[s->top--];
 }
 
-void pre_order_non_rec(tree_t root, int nb_node)
+void pre_order_non_rec(tree_t root, int node)
 {
     if (root == NULL)
     {
@@ -202,7 +210,7 @@ void pre_order_non_rec(tree_t root, int nb_node)
         return;
     }
     
-    stack_t* s = init_stack(nb_node);
+    stack_t* s = init_stack(node);
     tree_t current = root;
 
     push(s, current);
@@ -219,7 +227,7 @@ void pre_order_non_rec(tree_t root, int nb_node)
     free(s);
 }
 
-void in_order_non_rec(tree_t root, int nb_node)
+void in_order_non_rec(tree_t root, int node)
 {
     if(root == NULL)
     {
@@ -227,7 +235,7 @@ void in_order_non_rec(tree_t root, int nb_node)
         return;
     }
 
-    stack_t *s = init_stack(nb_node);
+    stack_t *s = init_stack(node);
     tree_t current = root;
 
     while (current != NULL || !is_empty(s))
@@ -246,12 +254,12 @@ void in_order_non_rec(tree_t root, int nb_node)
     free(s);
 }
 
-void post_order_non_rec(tree_t root, int nb_node)
+void post_order_non_rec(tree_t root, int node)
 {
     if(root == NULL) return;
 
-    stack_t* s1 = init_stack(nb_node);
-    stack_t* s2 = init_stack(nb_node);
+    stack_t* s1 = init_stack(node);
+    stack_t* s2 = init_stack(node);
 
     tree_t current;
     push(s1, root);
@@ -297,5 +305,105 @@ void rise(int heap[], int i, int v)
 
 void sink(int heap[], int n, int i)
 {
-    return ;
+    int x = heap[i];
+    int j = 2 * i + 1;
+
+    while(j < n)
+    {
+        if(j + 1 < n && heap[j] < heap[j + 1]) j++;
+
+        if(x >= heap[j]) break;
+        heap[i] = heap[j];
+        i = j;
+        j = 2 * i + 1;   
+    }
+    heap[i] = x;
 }
+
+void heap_sort(int heap[], int n)
+{
+    if (n > 1)
+    {
+        int tmp = heap[n - 1];
+        heap[n - 1] = heap[0];
+        heap[0] = tmp;
+
+        sink(heap, n - 1, 0);
+        heap_sort(heap, n - 1);
+    }
+}
+
+// Queues 
+
+queue_t* init_queue(int size)
+{
+    queue_t* queue = (queue_t*)malloc(sizeof(queue_t));
+    
+    if (queue != NULL)
+    {
+        queue->data = (tree_t*)malloc(size * sizeof(tree_t));
+        queue->front = 0;
+        queue->rear = 0;
+        queue->size = size;
+    }
+    return queue;   
+}
+
+int is_empty_queue(queue_t* queue)
+{
+    return queue->front == queue->rear;
+}
+
+int is_full_queue(queue_t* queue)
+{
+    return ((queue->rear + 1) % queue->size) ==  queue->front;
+}
+
+void enqueue(queue_t* q, tree_t t)
+{
+    if (is_full_queue(q))
+    {
+        printf("Error ! Queue is full !\n");
+        return;
+    }
+    q->data[q->rear] = t;
+    q->rear = (q->rear + 1) % q->size;
+}
+
+tree_t dequeue(queue_t* q)
+{
+    if (is_empty_queue(q))
+    {
+        printf("Error ! Queue is empty !\n");
+        exit(1);
+    }
+    tree_t tmp = q->data[q->front];
+    q->front = (q->front + 1) % q->size;
+    return tmp;
+}
+
+void display_queue(queue_t* q)
+{
+    int p = q->front;
+    while(p < q->rear)
+        printf("%d ", q->data[p++]->val);
+    printf("\n");
+}   
+
+void BFS(tree_t root)
+{
+    int nb = nb_node(root);
+    queue_t* queue = init_queue(nb);
+    enqueue(queue, root);
+
+    while(!is_empty_queue(queue))
+    {
+        tree_t p = dequeue(queue);
+        printf("%d ", p->val);
+
+        if(p->left != NULL) enqueue(queue, p->left);
+        if(p->right != NULL) enqueue(queue, p->right);
+    }
+    printf("\n");
+}
+
