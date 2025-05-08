@@ -103,7 +103,6 @@ assert tri_insertion_rec(t1, n) == t1
                     * Output : 
                         - m : int -> la valeur qui partitionne le tableau en 2 parties (gauche inf / droite sup)          
 
-'''
 
 def partition(t : list[int], g : int, d : int) -> int:
 
@@ -132,3 +131,61 @@ def tri_rapide0(t : list[int], g : int, d : int) -> None:
 
 def tri_rapide(t : list[int], n : int) -> None:
     tri_rapide0(t, 0, len(t))
+
+'''
+
+'''
+    * Tri par Fusion (Merge sort)
+        * Principe : Diviser le tableau en des sous-tableaux et trier les sous-tablaeux puis les fusionner à chaque fois  
+        * Input :
+            - a : list[int] -> Tableau à trier
+            - dim : int -> la taille du tableau a
+        
+        ** On fait appel à 2 fonctions, une locale et une autre définie en dehors de la fonction principale
+            * fusionRec():
+                * Input : 
+                    - g, d : int -> les indices du tableau a[g, d]
+                * Output :
+                    - None -> Rien (le traitement se fait sur le tableau)
+                
+                * fusion():
+                    * Input :
+                        - a, b : list[int] -> les sous-tableaux qu'on va fusionner
+                        - g, d, m : int -> les indices du tableau t[g, d] et m l'indice de séparation
+                    * Output : 
+                        - None -> Rien (le traitement se fait sur les tableaux)
+    
+'''
+
+def fusion(a : list[int], b : list[int], g : int, m : int, d : int) -> None:
+
+    assert len(a) == len(b)
+
+    i, j = g, m
+
+    for k in range(g, d):
+        if i < m and (j == d or a[i] < a[j]):
+            b[k] = a[i]
+            i += 1
+        else:
+            b[k] = a[j]
+            j += 1
+    return None
+
+def tri_fusion(a : list[int], dim : int) -> int:
+
+    b = a[:]
+
+    def fusionRec(g : int, d : int):
+        if g >= d - 1:
+            return 
+        m = (g + d) // 2
+        fusionRec(g, m)
+        fusionRec(m, d)
+        b[g:d] = a[g:d]
+        fusion(a, b, g, m, d)
+
+    fusionRec(a, len(a))
+
+    return None
+

@@ -25,5 +25,5 @@ for (let i = 0; i < n; i++) {
     t[i] = parseFloat(prompt("Entrer " + i));
 }
 var e = ecart_type(t);
-alert(e.toFixed(2));
+alert("Ecart type : " + e.toFixed(2));
 
