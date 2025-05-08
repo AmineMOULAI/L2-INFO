@@ -15,7 +15,6 @@
         int capacity, top;
     }stack_t;
 
-
     int* create_array(int n);
     node_t* create_node(int val);
     int tree_height(tree_t A);
@@ -40,6 +39,28 @@
     int is_heap(int array[], int n);
     void rise(int heap[], int i, int v);
     void sink(int heap[], int n, int i);
+    void heap_sort(int heap[], int n);
+
+    
+    typedef struct queue
+    {
+        tree_t* data;
+        int front;
+        int rear;
+        int size;  
+    }queue_t;
+    
+    queue_t* init_queue(int size);
+    int is_empty_queue(queue_t* queue);
+    int is_full_queue(queue_t* queue);
+    void enqueue(queue_t* q, tree_t t);
+    tree_t dequeue(queue_t* q);
+    void display_queue(queue_t* q);
+    void BFS(tree_t root);
+
+
+
+
 
 
 
